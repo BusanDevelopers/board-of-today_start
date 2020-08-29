@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Product example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+        body { 
+            background-image: url('../static/background.jpg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; }
+      .thin::-webkit-scrollbar {
+        width: 6px; }
+
+    </style>
+        <link href="/static/product.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom styles for this template -->      
+    <link href="../static/product.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-2 bg-white">
+      <div class="row flex-nowrap justify-content-between align-items-center" style="height:30px;">
+          <a class="col-3" href="#" aria-label="Product">
+          <img src="/static/logo.jpg" width="190" height="30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></img>
+          </a>
+          <a class="col-3" href="#" width ="70">Information</a>
+          <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  Videos
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="youtube/motivation">동기부여</a>
+                  <a class="dropdown-item" href="youtube/job">취업 팁</a>
+                  <a class="dropdown-item" href="youtube/coding">코딩테스트</a>
+              </div>
+          </div>
+          <!--a class="col-3" href="#">Youtube</a-->
+              <a class="col-3" href="#">Article</a>
+          </div>
+      </nav-->
+
+
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-4">
+    <div class="bg-dark mr-md-4 pt-3 px-3 pt-3 px-md-3 text-center text-white overflow-hidden" style="border-radius: 21px 21px 21px 21px;">
+        <div class="row flex-nowrap justify-content-between align-items-center my-4">
+            <div class="col-1"></div>
+            <div class="col-10 text-center">
+                <h3 class="display-5 text-light">부산대학교 학생지원시스템</h3>
+            </div>
+            <div class="col-1 d-flex justify-content-end align-items-center">
+                <a class="btn btn-outline-dack bg-light" href="https://e-onestop.pusan.ac.kr/menu/bbs/notice/list?menuId=20001104&rMenu=12" style="border-radius: 15px 15px 15px 15px;">┽</a>
+            </div>
+        </div>
+        <div class="bg-light mb-md-5 shadow-sm mx-auto overflow-auto thin" style="width: 100%; height: 350px; border-radius: 21px 21px 21px 21px;">
+          <table class="table">
+            <tbody>
+              {% for scp_smart in scp_smarts %} 
+                <tr>
+                  <td colspan="3">
+                    <a href={{scp_smart["link"]}} target="_blank" style="text-decoration: none; color: black;"><strong>{{scp_smart["title"]}}</strong></a>
+                  </td>
+                  <td>{{scp_smart["rate"]}}</td>
+                </tr>
+              {% endfor %}  
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <div class="bg-dark mr-md-4 pt-3 px-3 pt-3 px-md-3 text-center text-black overflow-hidden" style="border-radius: 21px 21px 21px 21px;">
+        <div class="row flex-nowrap justify-content-between align-items-center my-4">
+            <div class="col-1"></div>
+            <div class="col-10 text-center">
+                <h3 class="display-5 text-light">부산대학교 정보컴퓨터공학</h3>
+            </div>
+            <div class="col-1 d-flex justify-content-end align-items-center">
+                <a class="btn btn-outline-dack bg-light" href="https://cse.pusan.ac.kr/cse/14651/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY3NlJTJGMjYwNSUyRmFydGNsTGlzdC5kbyUzRg%3D%3D" style="border-radius: 15px 15px 15px 15px;">┽</a>
+            </div>
+        </div>
+        <div class="bg-light mb-md-5 shadow-sm mx-auto overflow-auto thin" style="width: 100%; height: 350px; border-radius: 21px 21px 21px 21px;">
+          <table class="table">
+            <tbody>
+              {% for scp_notice in scp_notices %} 
+                <tr>
+                  <!-- <th scope="row">{{scp_notice["num"]}}</th> -->
+                  <td colspan="3"><a href={{scp_notice["link"]}} target="_blank" style="text-decoration: none; color: black;"><strong>{{scp_notice["title"]}}</strong></a></td>
+                  <td>{{scp_notice["rate"]}}</td>
+                </tr>
+              {% endfor %}  
+       
+            </tbody>
+          </table>        
+        </div>
+    </div>
+</div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-4">
+    <div class="bg-dark mr-md-4 pt-3 px-3 pt-3 px-md-3 text-center text-black overflow-hidden" style="border-radius: 21px 21px 21px 21px;">
+        <div class="row flex-nowrap justify-content-between align-items-center my-4">
+            <div class="col-1 d-flex justify-content-end align-items-center">
+            </div>
+            <div class="col-10 text-center">
+                <h3 class="display-5 text-light">채용 게시판</h3>
+            </div>
+            <div class="col-1 d-flex justify-content-end align-items-center">
+                <a class="btn btn-outline-dack bg-light" href="https://cse.pusan.ac.kr/cse/14667/subview.do" style="border-radius: 15px 15px 15px 15px;">┽</a>
+            </div>
+        </div>
+        <div class="bg-light mb-md-5 shadow-sm mx-auto overflow-auto thin" style="width: 100%; height: 350px; border-radius: 21px 21px 21px 21px;">
+          <table class="table">
+            <tbody>
+              {% for scp_emp in scp_emps %} 
+                <tr>
+                  <!-- <th scope="row">{{scp_emp["num"]}}</th> -->
+                  <td colspan="3"><a href={{scp_emp["link"]}} target="_blank" style="text-decoration: none; color: black;"><strong>{{scp_emp["title"]}}</strong></a></td>
+                  <td>{{scp_emp["date"]}}</td>
+                </tr>
+              {% endfor %}  
+       
+            </tbody>
+          </table>
+        </div>
+    </div>
+    <div class="bg-dark mr-md-4 pt-3 px-3 pt-3 px-md-3 text-center text-black overflow-hidden" style="border-radius: 21px 21px 21px 21px;">
+        <div class="row flex-nowrap justify-content-between align-items-center my-4">
+            <div class="col-1 d-flex justify-content-end align-items-center">
+            </div>
+            <div class="col-10 text-center">
+                <h3 class="display-5 text-light">부산정보산업진흥원</h3>
+            </div>
+            <div class="col-1 d-flex justify-content-end align-items-center">
+                <a class="btn btn-outline-dack bg-light" href="http://www.busanit.or.kr/board/list.asp?bcode=notice_e&sword=&search_txt=&ipage=1" style="border-radius: 15px 15px 15px 15px;">┽</a>
+            </div>
+        </div>
+        <div class="bg-light mb-md-5 shadow-sm mx-auto overflow-auto thin" style="width: 100%; height: 350px; border-radius: 21px 21px 21px 21px;">
+          <table class="table" style="border: 0px solid black;">
+            <tbody>
+              {% for scp_pusanit in scp_pusanits %} 
+              <tr>
+                <!-- <th scope="row">{{scp_pusanit["num"]}}</th> -->
+                <td colspan="3"><a href={{scp_pusanit["link"]}} target="_blank" style="text-decoration: none; color: black;"><strong>{{scp_pusanit["title"]}}</strong></a></td>
+                <td>{{scp_pusanit["rate"]}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+
+<footer class="container py-5">
+  <div class="row">
+    <!--<div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+      <small class="d-block mb-3 text-muted">&copy; 2020 summer</small>
+    </div>-->
+    <div class="col-6 col-md text-center">
+      <h5>Name</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Yu dong yeop</a></li>
+        <li><a class="text-muted" href="#">Cho young woo</a></li>
+        <li><a class="text-muted" href="#">Chae gi jung</a></li>
+        <li><a class="text-muted" href="#">Hong ji hye</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md text-center">
+      <h5>E-mail</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Resource</a></li>
+        <li><a class="text-muted" href="#">Resource name</a></li>
+        <li><a class="text-muted" href="#">Another resource</a></li>
+        <li><a class="text-muted" href="#">Final resource</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md text-center">
+      <h5>Github</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Business</a></li>
+        <li><a class="text-muted" href="#">Education</a></li>
+        <li><a class="text-muted" href="#">Government</a></li>
+        <li><a class="text-muted" href="#">Gaming</a></li>
+      </ul>
+    </div>
+        
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</html>
