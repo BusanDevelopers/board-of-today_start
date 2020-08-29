@@ -17,22 +17,23 @@ def Scrapping_notices():
     col4 = db.SSS_Collection.find()
     return render_template('board_main.html', scp_notices=col1, scp_pusanits=col3, scp_emps=col2, scp_smarts=col4,) # scp_stu_notices = stu_notices
 
-@app.route("/youtube")
-@app.route("/youtube/motivation")
+
+
+@app.route("/motivation")
 def mot():
     client = MongoClient()
     db = client.Board_DB
     col5 = db.Youtube_Collection.find()
     return render_template('youtube.html',videos = col5)
 
-@app.route("/youtube/job")
+@app.route("/job")
 def job():
     client = MongoClient()
     db = client.Board_DB
     col6 = db.Youtube_Collection2.find()
     return render_template('youtube.html',videos = col6)
 
-@app.route("/youtube/coding")
+@app.route("/coding")
 def code():
     client = MongoClient()
     db = client.Board_DB
