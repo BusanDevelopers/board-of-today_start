@@ -1,13 +1,19 @@
 from flask import Flask, render_template, url_for
 from pymongo import MongoClient
 from youtube import get_vid
-
+from get_wise import get_Wise
 
 # from STU_Notice import get_stu_notices
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET','POST'])
+@app.route("/")
+def home():
+    wise_saying = get_Wise()
+    return render_template('home.html',wise_saying = wise_saying)
+
+
+@app.route('/board', methods=['GET','POST'])
 def Scrapping_notices():
     client = MongoClient()
     db = client.Board_DB
