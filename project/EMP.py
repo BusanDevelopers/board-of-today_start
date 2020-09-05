@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup 
 from pymongo import MongoClient
 pageChar = 100
+from DB_Info import db_info
 
 URL = f"https://cse.pusan.ac.kr/cse/14667/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY3NlJTJGMjYxNiUyRmFydGNsTGlzdC5kbyUzRmJic09wZW5XcmRTZXElM0QlMjZpc1ZpZXdNaW5lJTNEZmFsc2UlMjZzcmNoQ29sdW1uJTNEJTI2cGFnZSUzRD{chr(pageChar)}lMjZzcmNoV3JkJTNEJTI2cmdzQmduZGVTdHIlM0QlMjZiYnNDbFNlcSUzRCUyNnJn"
 
@@ -13,7 +14,7 @@ URL = f"https://cse.pusan.ac.kr/cse/14667/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJ
 
 #  last_page = links[-2].get_text(strip=True)
 #  return int(last_page)
-client = MongoClient()
+client = MongoClient(db_info())
 db = client.Board_DB
 collection = db.EMP_Collection
 

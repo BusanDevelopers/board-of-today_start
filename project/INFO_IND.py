@@ -1,11 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
+from DB_Info import db_info
 
 LIMIT = 50
 URL = "http://www.busanit.or.kr/board/list.asp?bcode=notice_e&sword=&search_txt=&ipage="
 
-client = MongoClient()
+client = MongoClient(db_info())
 db = client.Board_DB
 collection = db.INFO_IND_Collection
 

@@ -2,12 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 from pymongo import MongoClient
+from DB_Info import db_info
 
 LIMIT = 50
 URL1 = f"https://cse.pusan.ac.kr/cse/14651/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGY3NlJTJGMjYwNSUyRmFydGNsTGlzdC5kbyUzRmJic09wZW5XcmRTZXElM0QlMjZpc1ZpZXdNaW5lJTNEZmFsc2UlMjZzcmNoQ29sdW1uJTNEJTI2cGFnZSUzRD"
 URL2 = f"lMjZzcmNoV3JkJTNEJTI2cmdzQmduZGVTdHIlM0QlMjZiYnNDbFNlcSUzRCUyNnJnc0VuZGRlU3RyJTNEJTI2"
 
-client = MongoClient()
+client = MongoClient(db_info())
 db = client.Board_DB
 collection = db.CSE_Notice_Collection
 

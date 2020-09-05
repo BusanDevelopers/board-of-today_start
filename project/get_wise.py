@@ -2,7 +2,7 @@ from random import randint
 
 def get_Wise():
     wise_saying = {}
-    with open('project/static/good.txt','r', encoding='utf8') as f:
+    with open('project/static/good.txt', 'r', encoding='utf8') as f:
         index = randint(1, 187)
         string = f.readlines()[index]
         if string.find('-') != -1:

@@ -7,8 +7,9 @@ import os, sys
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from pymongo import MongoClient
+from DB_Info import db_info
 
-client = MongoClient()
+client = MongoClient(db_info())
 db = client.Board_DB
 collection1 = db.Youtube_Collection
 collection2 = db.Youtube_Collection2
